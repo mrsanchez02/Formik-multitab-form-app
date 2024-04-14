@@ -33,7 +33,7 @@ const App = () => {
 
   return (
     <div className='mx-4 mt-5 d-flex justify-content-center flex-column'>
-      <Card className='w-25 mb-4'>
+      <Card className='mb-4 w-auto' style={{maxWidth: '34rem'}}>
         <Card.Body>
       <Formik
         initialValues={initialValues}
@@ -91,9 +91,10 @@ const App = () => {
       </Formik>
       </Card.Body>
       </Card>
-      <Card className='w-25'>
-        <Card.Body>
+      <Card className='w-auto' style={{maxWidth: '34rem'}}>
+        <Card.Body className='bg-dark text-white'>
           <h2>Values</h2>
+          <hr />
           <pre>{JSON.stringify(values, null, 2)}</pre>
         </Card.Body>
       </Card>

@@ -12,10 +12,8 @@ export const StepOne = ({
     <>
       <Row>
         <Col>
-        <label htmlFor="firstName">First Name</label>
-        </Col>
-        <Col>
-        <input id="firstName" name="firstName" placeholder="Jane" onChange={({target}) => updateFields(target.name, target.value)} value={values.firstName} />
+        <label htmlFor="firstName" className="form-label">First Name</label>
+        <input id="firstName" name="firstName" placeholder="Jane" onChange={({target}) => updateFields(target.name, target.value)} value={values.firstName} className="form-control" />
         {errors.firstName && touched.firstName ? (
           <div className="text-danger" style={{fontSize: '12px'}}>* {errors.firstName}</div>
         ) : null}
@@ -24,10 +22,8 @@ export const StepOne = ({
       <br />
       <Row>
         <Col>
-      <label htmlFor="lastName">Last Name</label>
-        </Col>
-        <Col>
-      <input id="lastName" name="lastName" placeholder="Doe" onChange={({target}) => updateFields(target.name, target.value)} value={values.lastName} />
+      <label htmlFor="lastName" className="form-label">Last Name</label>
+      <input id="lastName" name="lastName" placeholder="Doe" onChange={({target}) => updateFields(target.name, target.value)} value={values.lastName} className="form-control"/>
       {errors.lastName && touched.lastName ? (
         <div className="text-danger" style={{fontSize: '12px'}}>* {errors.lastName}</div>
       ) : null}
